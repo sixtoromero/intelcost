@@ -1,23 +1,14 @@
 <h1>Galería de imágenes <small>Intel<strong>cost</strong></small></h1>
 <hr>
-<div class="row" *ngIf="galleries.length === 0 || galleries === null">
+<div class="row animated fadeIn fast" *ngIf="galleries.length === 0 || galleries === null">
     <div class="col-md-12">
         <div class="alert alert-info" role="alert">
             El filtro {{ filter }} no arrojó resultados, por favor intente nuevamente.
         </div>
     </div>
 </div>
+
 <div class="card-columns">
-    <div class="card animated fadeIn fast" *ngFor="let item of galleries">
-        <img [src]="item.previewURL" class="card-img-top" [alt]="item.user">
-        <div class="card-body">
-          <h5 class="card-title">{{ item.tags }}</h5>
-          <!-- <p class="card-text"><i class="fas fa-eye"></i> {{ item.views }}</p>
-          <p class="card-text"><i class="fas fa-thumbs-up"></i> {{ item.likes }}</p> -->
-          <button (click)="detailView(item.id)" type="button" class="btn btn-outline-primary btn-block">
-              Ver más
-          </button>
-          <!-- <a [routerLink]="['/detailview', item.id]" class="btn btn-outline-primary">Ver más link...</a> -->
-        </div>
-      </div>
+    <app-image-card *ngFor="let item of galleries" (imageSel)="detailView($event)" [image]="item"></app-image-card>
 </div>
+<ngx-ui-loader></ngx-ui-loader>

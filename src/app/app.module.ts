@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxUiLoaderModule } from 'ngx-ui-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 //Rutas
-
 
 //Components
 import { AppComponent } from './app.component';
@@ -14,6 +14,8 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { APP_ROUTING } from './app.routes';
 import { DetailviewComponent } from './components/detailview/detailview.component';
 import { ImgfilterComponent } from './components/imgfilter/imgfilter.component';
+import { ImageCardComponent } from './components/image-card/image-card.component';
+
 
 @NgModule({
   declarations: [
@@ -22,12 +24,14 @@ import { ImgfilterComponent } from './components/imgfilter/imgfilter.component';
     HomeComponent,
     GalleryComponent,
     DetailviewComponent,
-    ImgfilterComponent
+    ImgfilterComponent,
+    ImageCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxUiLoaderModule,
     APP_ROUTING
   ],
   providers: [],

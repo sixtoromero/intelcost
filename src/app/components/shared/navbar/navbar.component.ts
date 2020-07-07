@@ -15,6 +15,8 @@ export class NavbarComponent implements OnInit {
   buscarImagenTexto(value: string) {
     if (value.length > 0) {
       this.router.navigate(['/imgfilter', value + '|text']);
+    } else {
+      this.router.navigate(['gallery']);
     }
   }
 

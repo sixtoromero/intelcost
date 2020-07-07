@@ -1,0 +1,10 @@
+<div class="card animated fadeIn fast">
+    <!-- <img [src]="item.previewURL" class="img-size" [alt]="item.user"> -->
+    <img [src]="image.largeImageURL" class="card-img-top" width="350px" height="350px" [alt]="image.user">
+    <div class="card-body">
+      <!-- <h5 class="card-title">{{ item.tags }}</h5> -->
+      <button (click)="detailView(image.id)" type="button" class="btn btn-outline-primary btn-block">
+          Ver más
+      </button>
+    </div>
+  </div>
