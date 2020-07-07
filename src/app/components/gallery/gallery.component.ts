@@ -27,5 +27,4 @@ export class GalleryComponent implements OnInit {
   detailView(id: number) {
     this.router.navigate(['/detailview', id]);
   }
-
 }
