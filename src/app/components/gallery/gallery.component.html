@@ -1,6 +1,6 @@
 <h1>Galería de imágenes <small>Intel<strong>cost</strong></small></h1>
 <hr>
 <div class="card-columns">
-  <app-image-card *ngFor="let item of galleries" (imageSel)="detailView($event)" [image]="item"></app-image-card>
+  <app-cardimg *ngFor="let item of galleries" (imageSel)="detailView($event)" [image]="item"></app-cardimg>
 </div>
 <ngx-ui-loader></ngx-ui-loader>

@@ -18,7 +18,9 @@ import { GalleryModel } from 'src/app/models/gallery.model';
             super(http, environment.apiGatewayURL);
       }
 
-      getGalleryAll() {
+      ///Método encargado de listar todas las imágenes por la api definida en el environment
+      ///Retorna: Retorna una promesa en la cual le especifíco una lista de tipo hits
+      getGalleryAll() {        
         return new Promise( resolve => {
           this.get('')
             .subscribe(resp => {
@@ -36,6 +38,8 @@ import { GalleryModel } from 'src/app/models/gallery.model';
         });
       }
 
+      ///Método encargado de listar una imagen filtrada por el usuario
+      ///Retorna: Retorna una promesa en la cual le especifíco un registro de tipo hits
       getGalleryById(id: number) {
         return new Promise( resolve => {
           this.get(APIENDPOINT.getgallerybyid + id)
@@ -54,6 +58,8 @@ import { GalleryModel } from 'src/app/models/gallery.model';
         });
       }
 
+      ///Método encargado de listar todas las imágenes que correspondan al filtro aplicado
+      ///Retorna: Retorna una promesa en la cual le especifíco una lista de tipo hits
       getGalleryByText(text: string) {
         return new Promise( resolve => {
           this.get(APIENDPOINT.getgallerybytext + text)
@@ -72,6 +78,8 @@ import { GalleryModel } from 'src/app/models/gallery.model';
         });
       }
 
+      ///Método encargado de listar todas las imágenes que correspondan a una categoría
+      ///Retorna: Retorna una promesa en la cual le especifíco una lista de tipo hits
       getGalleryByCategory(category: string) {
         return new Promise( resolve => {
           this.get(APIENDPOINT.getgallerybycategory + category)

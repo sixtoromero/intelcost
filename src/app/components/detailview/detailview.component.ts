@@ -10,7 +10,6 @@ import { NgxUiLoaderService } from 'ngx-ui-loader';
 })
 export class DetailviewComponent implements OnInit {
 
-  @Output() oDetailView: EventEmitter<string>;
   gallery = new HitsModel();
   id: number;
   
@@ -18,8 +17,6 @@ export class DetailviewComponent implements OnInit {
   constructor(public galleryService: GalleryService,
               private ngxService: NgxUiLoaderService,
               activateRoute: ActivatedRoute) {
-
-                this.oDetailView = new EventEmitter();
 
                 activateRoute.params.subscribe(params => {
                   this.id = +params['id'];
