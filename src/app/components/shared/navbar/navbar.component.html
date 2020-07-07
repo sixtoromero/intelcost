@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="assets/img/logo.png" width="30" height="30" alt="" loading="lazy">
+      </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['home']">Inicio</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['gallery']">Gallería</a>
+        </li>
+      </ul>
+
+      <div class="form-inline my-2 my-lg-0">
+        
+        <select #category class="custom-select" id="category" style="margin-right: 5px; margin-bottom: 5px;" (change)="buscarImagenCategoria(category.value)">
+          <option value="-1" selected>por categoría</option>
+          <option value="science">science</option>
+          <option value="education">education</option>
+          <option value="people">people</option>
+          <option value="feelings">feelings</option>
+          <option value="computer">computer</option>
+          <option value="buildings">buildings</option>
+        </select>
+
+        <input class="form-control mr-sm-2" type="text" placeholder="Imagen a buscar" aria-label="Buscar" (keydown.enter)="buscarImagenTexto(txtBuscarImg.value)" style="margin-right: 5px; margin-bottom: 5px;" #txtBuscarImg>
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="button" (click)="buscarImagenTexto(txtBuscarImg.value)">Buscar</button>
+
+      </div>
+
+    </div>
+  </nav>

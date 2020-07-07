@@ -1,0 +1,13 @@
+<h1>Galería de imágenes <small>Intel<strong>cost</strong></small></h1>
+<hr>
+<div class="card-columns">
+  <div class="card animated fadeIn fast" *ngFor="let item of galleries">
+      <img [src]="item.previewURL" class="card-img-top" [alt]="item.user">
+      <div class="card-body">
+        <h5 class="card-title">{{ item.tags }}</h5>
+        <button (click)="detailView(item.id)" type="button" class="btn btn-outline-primary btn-block">
+            Ver más
+        </button>
+      </div>
+    </div>
+</div>
