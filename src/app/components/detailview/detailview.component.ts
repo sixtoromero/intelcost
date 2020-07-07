@@ -12,8 +12,7 @@ export class DetailviewComponent implements OnInit {
 
   gallery = new HitsModel();
   id: number;
-  
-  
+
   constructor(public galleryService: GalleryService,
               private ngxService: NgxUiLoaderService,
               activateRoute: ActivatedRoute) {
