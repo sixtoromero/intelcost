@@ -2,7 +2,6 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { HitsModel } from 'src/app/models/hits.model';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-cardimg',
   templateUrl: './cardimg.component.html'
