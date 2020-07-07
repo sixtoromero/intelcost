@@ -2,7 +2,6 @@ import { Observable, Subject } from 'rxjs';
 import { map } from "rxjs/operators";
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-
 import { ResponseModel } from '../models/response.model';
 
 ///Clase base que se requiere en los demás servicios para el poder hacer uso de las peticiones get
