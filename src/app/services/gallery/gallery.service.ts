@@ -2,9 +2,7 @@ import { Injectable, EventEmitter, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-
 import { environment } from 'src/environments/environment';
-
 import { BaseService } from '../_base.service';
 
 import { APIENDPOINT } from '../../config/configuration';
